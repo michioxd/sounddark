@@ -59,7 +59,9 @@ body.sc-classic {
 
 .l-container.l-content,
 .sc-classic .sound__soundActions,
-.sc-classic .profileUploadFooter {
+.sc-classic .profileUploadFooter,
+.sc-classic .currentPlan__planContainer,
+.sc-classic .currentPlan__basicPremierUpsell {
     background: #111 !important;
 }
 
@@ -334,7 +336,7 @@ input, select, textarea {
 
 .sc-classic .soundBadge.active:not(.compact), .sc-classic .soundBadge.hover:not(.compact), .sc-classic .soundBadge.selected:not(.compact), .sc-classic .soundBadge:hover:not(.compact),
 .sc-classic .readMoreTile__countWrapper {
-    background: #222 !important;
+    background: #111 !important;
 }
 
 .sc-classic .soundBadge__icon {
@@ -422,4 +424,49 @@ input, select, textarea {
 .dialog.sc-border-box.g-z-index-modal-content.smallText {
     background: #333 !important;
     border: 1px solid #444 !important;
+}
+
+.sc-classic .audibleTilePlaceholder:before {
+    border-color: #222 !important;
+}
+
+hr {
+    background: #333 !important;
+}
+
+.listenEngagement__actions button::before {
+    filter: invert(1) !important;
+}
+
+.sc-classic .linkMenu {
+    background-color: #222 !important;
+}
+
+.sc-button-dropdown:focus:not(.sc-button-disabled):not(:disabled) {
+    box-shadow: 0 0 0 4px #444 !important;
+}
+
+.sc-classic .trackItem.active, .sc-classic .trackItem.hover {
+    background-color: #333 !important;
+}
+
+.sc-classic .callout__bubble,
+.sc-classic .callout__bubble:before {
+    background: #222 !important;
+}
+
+.backgroundGradient::after {
+    content: '';
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sc-classic .trackItem:not(.m-disabled).active .trackItem__additional, .sc-classic .trackItem:not(.m-disabled).hover .trackItem__additional {
+    background: #333 !important;
+    background: linear-gradient(90deg, rgb(51 51 51 / 10%), #333 17px) !important;
 }
