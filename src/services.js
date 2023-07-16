@@ -48,3 +48,12 @@ self.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+self.addEventListener('DOMNodeRemoved', function () {
+    if (self.location.pathname.startsWith("/you/insights/overview") && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
+        if (document.querySelector(".insightsIframe")) {
+            if (document.querySelector(".insightsIframe").src !== "https://insights-ui.soundcloud.com/?darkmode=true") {
+                document.querySelector(".insightsIframe").src = 'https://insights-ui.soundcloud.com/?darkmode=true';
+            }
+        }
+    }
+});
