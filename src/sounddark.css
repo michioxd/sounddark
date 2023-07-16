@@ -363,3 +363,7 @@ input, select, textarea {
 .sc-classic .headerSearch__input {
     border: 1px solid #444 !important;
 }
+
+.sc-classic .trackMonetizationBanner {
+    background: #272623 !important;
+}

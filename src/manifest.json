@@ -1,7 +1,7 @@
 {
    "manifest_version": 3,
    "name": "SoundDark",
-   "version": "0.1",
+   "version": "0.1.1",
    "description": "A better Dark theme for SoundCloud",
    "icons": {
       "48": "icon48.png",
