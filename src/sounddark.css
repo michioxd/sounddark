@@ -194,7 +194,8 @@ a.sc-link-light:hover {
 .sc-button-cta.sc-button-insights:before,
 .sc-button-xlarge.sc-button-play:before,
 .sc-classic .playButton.m-stretch:before,
-.sc-classic .playableTile__actionWrapper button::before {
+.sc-classic .playableTile__actionWrapper button::before,
+.soundActions button::before {
     filter: initial !important;
 }
 
@@ -366,4 +367,38 @@ input, select, textarea {
 
 .sc-classic .trackMonetizationBanner {
     background: #272623 !important;
+}
+
+.sc-classic .queue {
+    background: #222 !important;
+}
+
+.sc-classic .queue__panel,
+.sc-classic .queueFallback__stationMode {
+    border-color: #444 !important;
+}
+
+.sc-classic .queue__hide, .sc-classic .queue__hide:focus, .sc-classic .queue__hide:hover {
+    filter: invert(1);
+    background-color: transparent !important;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPgogICAgPC9nPgo8L3N2Zz4K) !important;
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px 24px !important;
+}
+
+.sc-classic .queue__itemWrapper {
+    background: #222 !important;
+}
+
+.sc-classic .queueItemView.m-active, .sc-classic .queueItemView:hover {
+    background: #333 !important;
+}
+
+.sc-classic .queueItemView__meta a {
+    color: #aaa !important;
+}
+
+.sc-classic .queue__itemsHeight {
+    background: transparent !important;
 }
