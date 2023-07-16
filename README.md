@@ -10,6 +10,14 @@ A better Dark theme for SoundCloud
 
 ## Installation
 
+### Install via Store
+
+**Microsoft Store:** Coming soon...
+
+**Chrome Web Store:** well... i don't have money :)
+
+### Install manually
+
 - Go to [Release page](https://github.com/michioxd/sounddark/releases/latest) then download `release.zip`
 - Extract it in anywhere you want
 - Go to Chrome Extension (`chrome://extensions/`), toggle the `Developer Mode` at header
@@ -44,3 +52,7 @@ All code are released under [MIT License](LICENSE)
 ## Copyright
 
 The SoundCloud logo is a trademark of SoundCloud Global Limited & Co. KG.
+
+## Credits
+
+Made with love from [michioxd](https://github.com/michioxd) 
