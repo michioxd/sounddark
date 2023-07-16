@@ -1,5 +1,5 @@
 self.addEventListener('DOMContentLoaded', function () {
-    const version = "0.1.2";
+    const version = "0.1.3";
 
     function LoadTheme() {
         if (document.getElementById('sounddarkInjected') == null && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
