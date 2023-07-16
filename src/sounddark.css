@@ -1,0 +1,365 @@
+html {
+    color-scheme: dark !important;
+}
+
+body, a.sc-link-dark {
+    color: #eee !important;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background: #111;
+    width: 1240px;
+}
+
+button, input, select, textarea,
+.sc-buylink, .sc-buylink:visited {
+    color: #ccc !important;
+}
+
+a.sc-link-dark:hover, a.sc-link-medium:hover,
+.sc-buylink:hover, .sc-buylink:hover:visited {
+    opacity: 0.8 !important;
+}
+
+body.sc-classic {
+    background: #000 !important;
+}
+
+.sc-button {
+    background: #333 !important;
+    border-color: #444 !important;
+    color: #ccc !important;
+}
+
+.sc-button:before,
+.sc-button-small:before,
+.sc-classic .mobileApps__dismiss,
+.sc-classic .loading,
+.sc-button-medium.sc-button-edit:before,
+.sc-classic .paging-eof:before,
+.emptyNetworkPage.emptyStations .emptyNetworkPage__image,
+.sc-classic .emptyNetworkPage.emptyApps .emptyNetworkPage__image, .sc-classic .emptyNetworkPage.emptySets .emptyNetworkPage__image {
+    filter: invert(1) !important;
+}
+
+.sc-classic .header {
+    background: #222 !important;
+}
+
+.sc-classic .header__navMenu>li>a {
+    border-color: #121212 !important;
+}
+
+.l-container.l-content,
+.sc-classic .sound__soundActions,
+.sc-classic .profileUploadFooter {
+    background: #111 !important;
+}
+
+.sc-border-light-top,
+.sc-classic .mixedSelectionModule,
+.sc-border-light-bottom,
+.sc-border-light-right,
+.sc-classic .g-tabs,
+.sc-classic .showSpotlightUpsellBanner.spotlightUpsellBanner,
+.sc-classic .l-listen-wrapper .l-about-rows,
+.sc-classic .collection.m-overview .collection__section:not(:last-child) {
+    border-color: #333 !important;
+}
+
+.sc-classic .insightsSidebarModule__title {
+    color: #fff !important;
+}
+
+.sc-background-light {
+    background-color: #333 !important;
+}
+
+.sc-classic .tileGallery__sliderButton:after {
+    border-color: #ccc !important;
+}
+
+.sc-classic .tileGallery__sliderButton:active, .sc-classic .tileGallery__sliderButton:active:after, .sc-classic .tileGallery__sliderButton:focus, .sc-classic .tileGallery__sliderButton:focus:after, .sc-classic .tileGallery__sliderPeek:hover .tileGallery__sliderButton, .sc-classic .tileGallery__sliderPeek:hover .tileGallery__sliderButton:after {
+    border-color: #f50 !important;
+}
+
+.sc-classic .soundBadge__additional {
+    background: #000 !important;
+    background: linear-gradient(90deg, rgba(17, 17, 17, .1), #111 17px) !important;
+}
+
+a.sc-link-light {
+    color: #666 !important;
+}
+
+a.sc-link-light:hover {
+    color: #444 !important;
+}
+
+.sc-classic .headerMenu.m-light,
+.sc-classic .dropdownContent__container {
+    background: #111 !important;
+    border-color: #222 !important;
+}
+
+.sc-classic .m-light .headerMenu__link, .sc-classic .m-light .headerMenu__link:focus, .sc-classic .m-light .headerMenu__link:hover {
+    color: #eee !important;
+    font-weight: normal !important;
+}
+
+.sc-classic .m-light .headerMenu__link:focus, .sc-classic .m-light .headerMenu__link:hover {
+    background: #222 !important;
+}
+
+.sc-classic .headerMenu__list,
+.sc-classic .dropdownContent__header,
+.sc-classic .dropdownContent__listItem,
+.sc-classic .dropdownContent__main {
+    border-color: #222 !important;
+}
+
+.l-footer::after {
+    content: "SoundDark powered by michioxd" !important;
+    font-size: 10px !important;
+    font-weight: normal !important;
+    margin-top: 1rem !important;
+    opacity: 0.5 !important;
+}
+
+.sc-classic .notificationBadge__main {
+    color: #eee !important;
+}
+
+.sc-text {
+    color: #fff !important;
+}
+
+.sc-classic .dropbar__content {
+    background: #222 !important;
+}
+
+.sc-tag, .sc-tag:visited {
+    background: #333 !important;
+    border-color: #444 !important;
+}
+
+.sc-classic .g-tabs-link, .sc-classic .g-tabs-link:visited {
+    color: #ccc !important;
+}
+
+.sc-classic .g-tabs-link.active {
+    border-color: #f50 !important;
+    color: #f50 !important;
+}
+
+.sc-classic .playControls__bg, .sc-classic .playControls__inner {
+    background: #222 !important;
+    border-color: #444 !important;
+}
+
+.playControls__elements button,
+.playbackSoundBadge__showQueue,
+.sc-classic .modal__closeButton,
+.sc-ministats-small.sc-ministats-sounds:before,
+.sc-classic .emptyNetworkPage.emptyComments .emptyNetworkPage__image,
+.sc-classic .headerMenu__list .headerMenu__link::after,
+.sc-classic .quotaMeter__dropdownButton:after {
+    filter: invert(1) !important;
+}
+
+.sc-classic .playbackTimeline__progressBackground,
+.sc-classic .volume__sliderBackground,
+.sc-background-dark {
+    background-color: #333 !important;
+}
+
+.sc-classic .playbackTimeline__duration {
+    color: #999 !important;
+}
+
+.sc-classic .volume__sliderWrapper {
+    background: #222 !important;
+    border-color: #333 !important;
+}
+
+/* dismiss invert color */
+.sc-classic .playbackSoundBadge .playbackSoundBadge__follow, .sc-classic .playbackSoundBadge .playbackSoundBadge__like,
+.sc-button-cta.sc-button-insights:before,
+.sc-button-xlarge.sc-button-play:before,
+.sc-classic .playButton.m-stretch:before,
+.sc-classic .playableTile__actionWrapper button::before {
+    filter: initial !important;
+}
+
+.sc-classic .volume__sliderWrapper:after,
+.sc-classic .volume__sliderWrapper:before {
+    border-color: transparent transparent #333 #333 !important;
+}
+
+.profileHeaderBackground__visual,
+.profileHeaderBackground,
+.sc-classic .fullHero {
+    background-color: #333 !important;
+}
+
+.sc-classic .modal.modalWhiteout {
+    background-color: rgba(0, 0, 0, .7) !important;
+}
+
+.sc-classic .modal__modal {
+    background: #222 !important;
+    border-color: #444 !important;
+}
+
+.sc-classic .g-modal-title-h1,
+.sc-classic .notificationBadge__link:focus:after {
+    border-color: #444 !important;
+}
+
+.sc-classic .listenEngagement {
+    border-color: #111 !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+.sc-classic .truncatedAudioInfo.m-overflow.m-collapsed .truncatedAudioInfo__wrapper:after {
+    background: #111 !important;
+    background: linear-gradient(rgba(17, 17, 17, .0), rgba(17, 17, 17.5) 90%, #222) !important;
+}
+
+.sc-classic .reportContent, .sc-classic .reportCopyright, .sc-classic .reportNea {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAnElEQVR4AZXNUQqDMBCE4TlWKApbiGBEpVYphQb6knvkaDnalLWK60uhfjA+5CfBX1+SBAvJiPKmCc7HizwZaQJ73MvEucx4FRtsPy+BA8c84pHtDetUcmXDwC53uGf7BBKcXFhTg7a0uJWFR4B0ChoMnLgGEhGBqEwQuAayQOmoLaihQS89vnQ2+w1ePHbwhgaVVDjoGE4cLLifPnBzeJR4+XAqAAAAAElFTkSuQmCC) no-repeat 0 0 !important;
+    filter: invert(1) !important;
+    color: #000 !important;
+}
+
+.sc-classic .commentForm__wrapper {
+    background: #222 !important;
+    border-color: #444 !important;
+}
+
+.sc-classic .commentForm__input {
+    background: #222 !important;
+    border-color: #444 !important;
+}
+
+.sc-input,
+.sc-select,
+input, select, textarea {
+    background: #222 !important;
+    border-color: #444 !important;
+}
+
+.sc-classic .playButton,
+.sc-button-play {
+    background-color: #f50 !important;
+    filter: initial !important;
+}
+
+.sc-classic .playButton::after,
+.sc-button-play::after,
+.sc-classic .playButton::before,
+.sc-button-play::before {
+    filter: initial !important;
+}
+
+.sc-classic .g-form-section-head,
+.sc-classic .composeMessage__bottomWrapper,
+.sc-classic .conversation__form,
+.sc-classic .moreActions {
+    border-color: #444 !important;
+}
+
+.sc-classic .conversation__actions {
+    box-shadow: 0 1px 0 #444 !important;
+    background: #111 !important;
+}
+
+.sc-classic .inboxItem.active, .sc-classic .inboxItem.unread, .sc-classic .inboxItem:focus, .sc-classic .inboxItem:hover,
+.sc-classic .sidebarInfoBox__body {
+    background-color: #333 !important;
+}
+
+.sc-classic .inbox__item:before {
+    background: #444 !important;
+}
+
+.sc-classic .conversationMessage__body,
+.sc-classic .playbackSoundBadge__titleLink, .sc-classic .playbackSoundBadge__titleLink:visited {
+    color: #ccc !important;
+}
+
+.sc-classic .playbackSoundBadge__titleLink:hover, .sc-classic .playbackSoundBadge__titleLink:hover:visited {
+    opacity: 0.8 !important;
+}
+
+.sc-classic .keyboardShortcuts__shortcutsGroup>dl>dt>kbd>kbd {
+    background-color: #444 !important;
+    font-weight: normal !important;
+}
+
+.sc-classic .quotaMeterWrapper,
+.sc-classic .uploadMain__chooserContainer,
+.sc-classic .uploadMain__foot {
+    background-color: #222 !important;
+    border-color: #444 !important;
+}
+
+.sc-classic .activeUpload__form {
+    background-color: #111 !important;
+    border-color: #222 !important;
+}
+
+.sc-classic .g-tabs,
+.sc-classic .trackManager__upsellWrapper {
+    background-color: #111 !important;
+}
+
+.sc-classic .g-upsell-container {
+    background-color: #222 !important;
+    border-color: #444 !important;
+}
+
+.sc-classic .blockCheckbox__title {
+    color: #ccc !important;
+}
+
+.sc-classic .soundBadge.active:not(.compact), .sc-classic .soundBadge.hover:not(.compact), .sc-classic .soundBadge.selected:not(.compact), .sc-classic .soundBadge:hover:not(.compact),
+.sc-classic .readMoreTile__countWrapper {
+    background: #222 !important;
+}
+
+.sc-classic .soundBadge__icon {
+    background: #111 !important;
+}
+
+.sc-classic .searchTitle {
+    background-color: #111 !important;
+}
+
+.sc-classic .searchTitle__text {
+    border-color: #333 !important;
+}
+
+.sc-classic .g-nav-item>.g-nav-link {
+    color: #ccc !important;
+}
+
+.sc-classic .g-nav-item.active>.g-nav-link {
+    color: #fff !important;
+}
+
+.sc-classic .playbackSoundBadge .playbackSoundBadge__follow, .sc-classic .playbackSoundBadge .playbackSoundBadge__like {
+    background: transparent !important;
+}
+
+.sc-classic .headerSearch__input {
+    border: 1px solid #444 !important;
+}

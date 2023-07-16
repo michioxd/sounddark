@@ -1,0 +1,16 @@
+{
+  "name": "sounddark",
+  "version": "0.1",
+  "description": "A better Dark theme for SoundCloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "mkdir dist && crx pack ./src --zip-output \"./dist/release.zip\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crx": "^5.0.1"
+  }
+}

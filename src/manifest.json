@@ -1,0 +1,35 @@
+{
+   "manifest_version": 3,
+   "name": "SoundDark",
+   "version": "0.1",
+   "description": "A better Dark theme for SoundCloud",
+   "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+   },
+   "background": {
+      "service_worker": "services.js",
+      "type": "module"
+   },
+   "content_scripts": [
+      {
+         "js": [
+            "services.js"
+         ],
+         "matches": [
+            "https://soundcloud.com/*"
+         ],
+         "run_at": "document_start"
+      }
+   ],
+   "web_accessible_resources": [
+      {
+         "resources": [
+            "sounddark.css"
+         ],
+         "matches": [
+            "https://soundcloud.com/*"
+         ]
+      }
+   ]
+}
