@@ -3,6 +3,11 @@ A better Dark theme for SoundCloud
 
 ![chrome_AjrOhRF44T](https://github.com/michioxd/sounddark/assets/80969068/6bd547af-ec7d-4e5e-9f94-9521f321f5c4)
 
+## Features
+
+- Toggle theme (original light theme and dark theme)
+- Dark theme :)
+
 ## Installation
 
 - Go to [Release page](https://github.com/michioxd/sounddark/releases/latest) then download `release.zip`
@@ -30,7 +35,7 @@ pnpm install
 pnpm run pack
 ```
 
-You should be see the release.zip in the `dist` directory
+You should see the release.zip in the `dist` directory
 
 ## License
 
