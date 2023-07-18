@@ -2,6 +2,23 @@ html {
     color-scheme: dark !important;
 }
 
+#SoundDarkMenu svg {
+    fill: #fff !important;
+}
+
+#SoundDarkMenu #SDD_DarkIcon {
+    display: block !important;
+}
+
+#SoundDarkMenu #SDD_LightIcon {
+    display: none !important;
+}
+
+.l-footer a:not(.localeSelector) {
+    color: #ccc !important;
+
+}
+
 body, a.sc-link-dark {
     color: #eee !important;
 }
@@ -421,9 +438,18 @@ input, select, textarea {
     background: #222 !important;
 }
 
-.dialog.sc-border-box.g-z-index-modal-content.smallText {
+.dialog.sc-border-box {
     background: #333 !important;
     border: 1px solid #444 !important;
+}
+
+.sc-classic .dialog__arrow {
+    background: #333 !important;
+    border-color: #444 !important;
+}
+
+.sc-classic .image__whiteOutline .image__full {
+    border-color: #444 !important;
 }
 
 .sc-classic .audibleTilePlaceholder:before {
@@ -469,4 +495,24 @@ hr {
 .sc-classic .trackItem:not(.m-disabled).active .trackItem__additional, .sc-classic .trackItem:not(.m-disabled).hover .trackItem__additional {
     background: #333 !important;
     background: linear-gradient(90deg, rgb(51 51 51 / 10%), #333 17px) !important;
+}
+
+.sc-checkbox-check,
+.sc-radio-radio,
+.sc-classic .trackMonetizationSidebarUpsell__dismiss {
+    filter: invert(1);
+}
+
+a:hover, a:hover:visited {
+    color: #38d;
+    opacity: 0.8;
+}
+
+.sc-classic .imageSelect__hint,
+.sc-classic .headerImageEditModal__hint {
+    color: #ccc !important;
+}
+
+.sc-classic .imageCrop__previewBackground:before {
+    background-color: rgba(0, 0, 0, .7) !important;
 }
