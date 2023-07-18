@@ -1,7 +1,7 @@
-# sounddark
+# SoundDark
 A better Dark theme for SoundCloud
 
-![chrome_AjrOhRF44T](https://github.com/michioxd/sounddark/assets/80969068/6bd547af-ec7d-4e5e-9f94-9521f321f5c4)
+![chrome_DFCvxsfeUw](https://github.com/michioxd/sounddark/assets/80969068/91d6168d-01dc-4b65-9ddd-1530defb396b)
 
 ## Features
 
