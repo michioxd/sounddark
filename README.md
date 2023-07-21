@@ -1,7 +1,7 @@
-# sounddark
+# SoundDark
 A better Dark theme for SoundCloud
 
-![chrome_AjrOhRF44T](https://github.com/michioxd/sounddark/assets/80969068/6bd547af-ec7d-4e5e-9f94-9521f321f5c4)
+![chrome_DFCvxsfeUw](https://github.com/michioxd/sounddark/assets/80969068/91d6168d-01dc-4b65-9ddd-1530defb396b)
 
 ## Features
 
@@ -23,6 +23,8 @@ A better Dark theme for SoundCloud
 - Go to Chrome Extension (`chrome://extensions/`), toggle the `Developer Mode` at header
 - Click `Load unpacked` then choose the directory of SoundDark you have extracted
 - Go to [SoundCloud](https://soundcloud.com) and enjoy :)
+
+[Watch Install instruction video on YouTube](https://youtu.be/eIGdk0d-oSQ)
 
 ## Development
 
@@ -48,6 +50,12 @@ You should see the release.zip in the `dist` directory
 ## License
 
 All code are released under [MIT License](LICENSE)
+
+## Screenshots
+
+![msedge_YyAQ3FHjTP](https://github.com/michioxd/sounddark/assets/80969068/5cba77b0-a8aa-4557-9a18-75060f0e29dd)
+![msedge_ywd1l4AW2e](https://github.com/michioxd/sounddark/assets/80969068/e86251e6-5848-4877-854c-0ba538f7b00d)
+![msedge_kjF75lnNKo](https://github.com/michioxd/sounddark/assets/80969068/0af3b81e-4bb5-4f7e-8cdc-0cce63b19e38)
 
 ## Copyright
 
