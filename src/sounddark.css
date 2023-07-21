@@ -14,6 +14,26 @@ html {
     display: none !important;
 }
 
+#SoundDarkMenu #SoundDarkMenu_ToggleCreatorTag {
+    display: flex !important;
+}
+
+.SoundDarkDisableCre #SoundDarkMenu_ToggleCreatorTag svg {
+    fill: #ff8b8b !important;
+}
+
+.l-footer::after {
+    content: "SoundDark powered by michioxd" !important;
+    font-size: 10px !important;
+    font-weight: normal !important;
+    margin-top: 1rem !important;
+    opacity: 0.5 !important;
+}
+
+.SoundDarkDisableCre .l-footer::after {
+    display: none !important;
+}
+
 .l-footer a:not(.localeSelector) {
     color: #ccc !important;
 
@@ -21,6 +41,10 @@ html {
 
 body, a.sc-link-dark {
     color: #eee !important;
+}
+
+a.sc-text-verylight:hover {
+    opacity: 0.8;
 }
 
 body::before {
@@ -144,13 +168,6 @@ a.sc-link-light:hover {
     border-color: #222 !important;
 }
 
-.l-footer::after {
-    content: "SoundDark powered by michioxd" !important;
-    font-size: 10px !important;
-    font-weight: normal !important;
-    margin-top: 1rem !important;
-    opacity: 0.5 !important;
-}
 
 .sc-classic .notificationBadge__main {
     color: #eee !important;
@@ -503,10 +520,7 @@ hr {
     filter: invert(1);
 }
 
-a:hover, a:hover:visited {
-    color: #38d;
-    opacity: 0.8;
-}
+
 
 .sc-classic .imageSelect__hint,
 .sc-classic .headerImageEditModal__hint {
@@ -515,4 +529,60 @@ a:hover, a:hover:visited {
 
 .sc-classic .imageCrop__previewBackground:before {
     background-color: rgba(0, 0, 0, .7) !important;
+}
+
+.sc-classic .banner.m-alert {
+    background-color: #2d1616 !important;
+}
+
+.sc-classic .banner.m-warning {
+    background-color: #292111 !important;
+}
+
+.sc-classic .banner.m-success {
+    background-color: #102a10 !important;
+}
+
+.playableTile__actions .playableTile__actionWrapper .playableTile__actionButton {
+    background: transparent !important;
+}
+
+.sc-classic .tabs__headingContainer, .sc-classic .tabs__tabs {
+    background: #111 !important;
+}
+
+.sc-classic .g-modal-section {
+    background: #111 !important;
+}
+
+.sc-classic .embedPanel__tabLink, .sc-classic .embedPanel__upsellTabLink {
+    background-color: #444 !important;
+}
+
+.sc-classic .repostOverlay__container:not(.repostOverlay--uiEvo) .repostOverlay__youReposted {
+    color: #999 !important;
+}
+
+.sc-classic .sc-ministats-small.sc-ministats-reposts.repostOverlay__messageRepostIcon:before {
+    filter: invert(1);
+}
+
+.sc-classic .repostOverlay__container {
+    background-color: #111 !important;
+    border-color: #333 !important;
+}
+
+.sc-classic .gritter-item-wrapper {
+    background-color: #222 !important;
+    border-color: #444 !important;
+    color: #eee !important;
+    box-shadow: none !important;
+}
+
+.sc-border-light {
+    border-color: #222 !important;
+}
+
+.sc-classic .currentPlan__planUpsell {
+    background-color: #222 !important;
 }
