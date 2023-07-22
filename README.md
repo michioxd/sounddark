@@ -12,7 +12,7 @@ A better Dark theme for SoundCloud
 
 ### Install via Store
 
-**Microsoft Store:** Coming soon...
+**Microsoft Store:** [click here](https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj)
 
 **Chrome Web Store:** well... i don't have money :)
 
