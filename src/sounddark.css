@@ -586,3 +586,7 @@ hr {
 .sc-classic .currentPlan__planUpsell {
     background-color: #222 !important;
 }
+
+.sc-classic .notificationBadge--unread {
+    background-color: #1a1a1a !important;
+}
