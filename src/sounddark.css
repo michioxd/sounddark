@@ -126,7 +126,8 @@ body.sc-classic {
 .sc-classic .g-tabs,
 .sc-classic .showSpotlightUpsellBanner.spotlightUpsellBanner,
 .sc-classic .l-listen-wrapper .l-about-rows,
-.sc-classic .collection.m-overview .collection__section:not(:last-child) {
+.sc-classic .collection.m-overview .collection__section:not(:last-child),
+.sc-classic .chartsMain_listHeader {
     border-color: #333 !important;
 }
 
@@ -333,7 +334,8 @@ input, select, textarea {
 }
 
 .sc-classic .inboxItem.active, .sc-classic .inboxItem.unread, .sc-classic .inboxItem:focus, .sc-classic .inboxItem:hover,
-.sc-classic .sidebarInfoBox__body {
+.sc-classic .sidebarInfoBox__body,
+.sc-classic .chartTrack.m-interactive:hover, .sc-classic .chartTrack.m-playing {
     background-color: #333 !important;
 }
 
