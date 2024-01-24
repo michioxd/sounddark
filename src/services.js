@@ -50,8 +50,8 @@ self.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function GetTitle(mode) {
-        switch (mode) {
+    function GetTitle() {
+        switch (localStorage.getItem("SoundDark_mode")) {
             case "system":
                 return "Automatic (System)";
             case "light":
@@ -65,22 +65,20 @@ self.addEventListener('DOMContentLoaded', function () {
         switch (localStorage.getItem("SoundDark_mode")) {
             case "system":
                 localStorage.setItem("SoundDark_mode", "light");
-                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = "Dark";
                 document.body.classList.remove("SoundDarkModeSystem");
                 LoadTheme(false);
                 break;
             case "light":
                 localStorage.setItem("SoundDark_mode", "dark");
-                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = "Light";
                 document.body.classList.remove("SoundDarkModeSystem");
                 LoadTheme(true);
                 break;
             default:
                 localStorage.setItem("SoundDark_mode", "system");
-                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = "Automatic (System)";
                 document.body.classList.add("SoundDarkModeSystem");
                 LoadTheme(self.matchMedia("(prefers-color-scheme: dark)").matches !== false ? false : true);
         }
+        document.getElementById("SoundDarkMenu_ToggleThemeButton").title = GetTitle();
     }
 
     function ToggleCre() {
@@ -119,7 +117,7 @@ self.addEventListener('DOMContentLoaded', function () {
                     d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z" />
             </svg>
         </a>
-        <a title="Toggle theme" style="cursor:pointer;width:100%;justify-content:center;display:flex"
+        <a title="${GetTitle()}" style="cursor:pointer;width:100%;justify-content:center;display:flex"
             id="SoundDarkMenu_ToggleThemeButton" class="headerMenu__link moreMenu__link">
             <svg style="fill:#333;display: none;" id="SDD_DarkIcon" xmlns="http://www.w3.org/2000/svg" height="1.5em"
                 viewBox="0 0 384 512">
@@ -138,7 +136,6 @@ self.addEventListener('DOMContentLoaded', function () {
         </a>
     </div>
 </ul>`;
-                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = GetTitle(localStorage.getItem("SoundDark_mode"));
                 document.getElementById("SoundDarkMenu_ToggleThemeButton").addEventListener('click', ToggleTheme);
                 document.getElementById("SoundDarkMenu_ToggleCreatorTag").addEventListener('click', ToggleCre);
             }
