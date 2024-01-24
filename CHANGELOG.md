@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.6] - 2024-01-24
+
+- Remove deprecated event (DOMNodeRemoved), use `MutationObserver` (issues [#3](https://github.com/michioxd/sounddark/issues/3))
+- Fix like comment button background color and comment timestamp
+- Fix comment style at [stream page](https://soundcloud.com/rick-astley-official/never-gonna-give-you-up-4)
+- Fix style in [top charts and tracks](https://soundcloud.com/charts/top) page
+- Fix compact list background color at "Playlist tagged [genere]"
+- Add system mode to following the system color theme in toggle theme (request [#2](https://github.com/michioxd/sounddark/issues/2))
+
 ## [0.1.5] - 2023-07-21
 
 ### Added

@@ -1,5 +1,5 @@
 self.addEventListener('DOMContentLoaded', function () {
-    const version = "0.1.5";
+    const version = "0.1.6";
     const changeThemeQuery = self.matchMedia("(prefers-color-scheme: dark)");
 
     function LoadTheme(remove) {
