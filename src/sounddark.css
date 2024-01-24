@@ -339,6 +339,20 @@ input, select, textarea {
     background-color: #333 !important;
 }
 
+.sc-classic .compactTrackListItem.clickToPlay.active, .sc-classic .compactTrackListItem.clickToPlay:focus, .sc-classic .compactTrackListItem.clickToPlay:hover,
+.sc-classic .compactTrackList__moreLink:focus, .sc-classic .compactTrackList__moreLink:hover {
+    background-color: #222 !important;
+}
+
+.sc-classic .compactTrackListItem.clickToPlay.active .compactTrackListItem__additional, .sc-classic .compactTrackListItem.clickToPlay:focus .compactTrackListItem__additional, .sc-classic .compactTrackListItem.clickToPlay:hover .compactTrackListItem__additional {
+    background-color: #111;
+    background: linear-gradient(90deg, hsla(0, 0%, 94.9%, .1), #111 17px) !important;
+}
+
+.sc-classic .compactTrackListItem__content {
+    color: #555 !important;
+}
+
 .sc-classic .inbox__item:before {
     background: #444 !important;
 }
