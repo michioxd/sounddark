@@ -14,6 +14,19 @@ html {
     display: none !important;
 }
 
+#SoundDarkMenu #SDD_AutoIcon {
+    display: none !important;
+}
+
+.SoundDarkModeSystem #SoundDarkMenu #SDD_AutoIcon {
+    display: block !important;
+}
+
+.SoundDarkModeSystem #SoundDarkMenu #SDD_DarkIcon,
+.SoundDarkModeSystem #SoundDarkMenu #SDD_LightIcon {
+    display: none !important;
+}
+
 #SoundDarkMenu #SoundDarkMenu_ToggleCreatorTag {
     display: flex !important;
 }

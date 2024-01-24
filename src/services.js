@@ -1,37 +1,71 @@
 self.addEventListener('DOMContentLoaded', function () {
     const version = "0.1.5";
+    const changeThemeQuery = self.matchMedia("(prefers-color-scheme: dark)");
+
+    function LoadTheme(remove) {
+        switch (remove) {
+            case true:
+                if (document.getElementById('sounddarkInjected') !== null) {
+                    document.getElementById('sounddarkInjected').remove();
+                }
+                break;
+            default:
+                if (document.getElementById('sounddarkInjected') == null) {
+                    let head = document.getElementsByTagName('head')[0],
+                        link = document.createElement('link');
+
+                    link.id = 'sounddarkInjected';
+                    link.rel = 'stylesheet';
+                    link.type = 'text/css';
+                    link.href = chrome.runtime.getURL('sounddark.css');
+                    link.media = 'all';
+
+                    head.appendChild(link);
+                }
+        }
+
+    }
 
     if (localStorage.getItem("SoundDark_dismissCre") === "yes") {
         document.body.classList.add("SoundDarkDisableCre");
     }
 
-    function LoadTheme() {
-        if (document.getElementById('sounddarkInjected') == null && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
-            let head = document.getElementsByTagName('head')[0],
-                link = document.createElement('link');
+    switch (localStorage.getItem("SoundDark_mode")) {
+        case "system":
+            document.body.classList.add("SoundDarkModeSystem");
+            if (changeThemeQuery.matches) {
+                LoadTheme(false);
+            }
+            break;
+        case "light":
+            LoadTheme(false);
+            break;
+        default:
+            LoadTheme(true);
+    }
 
-            link.id = 'sounddarkInjected';
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = chrome.runtime.getURL('sounddark.css');
-            link.media = 'all';
-
-            head.appendChild(link);
+    changeThemeQuery.onchange = function (e) {
+        if (localStorage.getItem("SoundDark_mode") === "system") {
+            LoadTheme(e.matches !== false ? false : true);
         }
     }
 
-    LoadTheme();
-
-
     function ToggleTheme() {
-        if (localStorage.getItem("SoundDark_dismissDark") === "yes") {
-            localStorage.removeItem("SoundDark_dismissDark");
-            LoadTheme();
-        } else {
-            localStorage.setItem("SoundDark_dismissDark", "yes");
-            if (document.getElementById('sounddarkInjected') !== null) {
-                document.getElementById('sounddarkInjected').remove();
-            }
+        switch (localStorage.getItem("SoundDark_mode")) {
+            case "system":
+                localStorage.setItem("SoundDark_mode", "light");
+                document.body.classList.remove("SoundDarkModeSystem");
+                LoadTheme(false);
+                break;
+            case "light":
+                localStorage.setItem("SoundDark_mode", "dark");
+                document.body.classList.remove("SoundDarkModeSystem");
+                LoadTheme(true);
+                break;
+            default:
+                localStorage.setItem("SoundDark_mode", "system");
+                document.body.classList.add("SoundDarkModeSystem");
+                LoadTheme(self.matchMedia("(prefers-color-scheme: dark)").matches !== false ? false : true);
         }
     }
 
@@ -43,7 +77,6 @@ self.addEventListener('DOMContentLoaded', function () {
             document.body.classList.add("SoundDarkDisableCre");
             localStorage.setItem("SoundDark_dismissCre", "yes");
         }
-
     }
 
     self.addEventListener('load', function () {
@@ -52,7 +85,9 @@ self.addEventListener('DOMContentLoaded', function () {
             const SDMenu = document.getElementById("SoundDarkMenu");
 
             if (targetMenu && !SDMenu) {
-                targetMenu.innerHTML += `<ul id="SoundDarkMenu" class="headerMenu__list sc-list-nostyle">
+                targetMenu.innerHTML += `
+                <style>.SoundDarkModeSystem #SoundDarkMenu #SDD_AutoIcon{display:block!important}.SoundDarkModeSystem #SoundDarkMenu #SDD_DarkIcon,.SoundDarkModeSystem #SoundDarkMenu #SDD_LightIcon{display:none!important}</style>
+                <ul id="SoundDarkMenu" class="headerMenu__list sc-list-nostyle">
     <small style="padding: 0.5rem;color:gray;font-weight: normal;font-size:9px">SoundDark v${version} by <a
             target="_blank" href="https://github.com/michioxd">michioxd</a></small>
     <div style="display:flex;flex-direction:row;align-items:center">
@@ -81,6 +116,7 @@ self.addEventListener('DOMContentLoaded', function () {
                 <path
                     d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
             </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#333;display: none;" id="SDD_AutoIcon" height="1.5em" viewBox="0 -960 960 960" width="1.5em"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg>
         </a>
         <a title="Disable/Enable creator line at footer" style="display:none;cursor:pointer;width:100%;justify-content:center;display:flex" class="headerMenu__link moreMenu__link"
             target="_blank" id="SoundDarkMenu_ToggleCreatorTag">
