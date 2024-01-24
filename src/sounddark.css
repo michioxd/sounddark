@@ -278,8 +278,8 @@ a.sc-link-light:hover {
 }
 
 .sc-classic .commentForm__wrapper {
-    background: #222 !important;
-    border-color: #444 !important;
+    background: transparent !important;
+    border-color: transparent !important;
 }
 
 .sc-classic .commentForm__input {
@@ -589,4 +589,20 @@ hr {
 
 .sc-classic .notificationBadge--unread {
     background-color: #1a1a1a !important;
+}
+
+.commentItem__creatorLink, .commentItem__creatorLink:hover, .commentItem__creatorLink:visited, .commentItem__username, .commentItem__usernameLink, .commentItem__usernameLink:hover, .commentItem__usernameLink:visited, .commentItem__body, .commentItem__replyButton:hover, .commentItem__replyButton:visited {
+    color: #eee !important;
+}
+
+.commentItem__replyButton {
+    color: #aaa !important;
+}
+
+.uiEvoButton--isLight.commentItem__likeButton {
+    background-color: #222 !important;
+}
+
+.sc-classic .commentForm__submitButton {
+    filter: invert(1);
 }
