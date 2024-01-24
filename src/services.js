@@ -95,7 +95,7 @@ self.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-self.addEventListener('DOMNodeRemoved', function () {
+(new MutationObserver(function () {
     if (self.location.pathname.startsWith("/you/insights/overview") && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
         if (document.querySelector(".insightsIframe")) {
             if (document.querySelector(".insightsIframe").src !== "https://insights-ui.soundcloud.com/?darkmode=true") {
@@ -103,4 +103,4 @@ self.addEventListener('DOMNodeRemoved', function () {
             }
         }
     }
-});
+})).observe(self.document.documentElement, { attributes: true, childList: true, subtree: true });
