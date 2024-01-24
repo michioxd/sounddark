@@ -50,20 +50,34 @@ self.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function GetTitle(mode) {
+        switch (mode) {
+            case "system":
+                return "Automatic (System)";
+            case "light":
+                return "Dark";
+            default:
+                return "Light";
+        }
+    }
+
     function ToggleTheme() {
         switch (localStorage.getItem("SoundDark_mode")) {
             case "system":
                 localStorage.setItem("SoundDark_mode", "light");
+                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = "Dark";
                 document.body.classList.remove("SoundDarkModeSystem");
                 LoadTheme(false);
                 break;
             case "light":
                 localStorage.setItem("SoundDark_mode", "dark");
+                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = "Light";
                 document.body.classList.remove("SoundDarkModeSystem");
                 LoadTheme(true);
                 break;
             default:
                 localStorage.setItem("SoundDark_mode", "system");
+                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = "Automatic (System)";
                 document.body.classList.add("SoundDarkModeSystem");
                 LoadTheme(self.matchMedia("(prefers-color-scheme: dark)").matches !== false ? false : true);
         }
@@ -105,20 +119,18 @@ self.addEventListener('DOMContentLoaded', function () {
                     d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z" />
             </svg>
         </a>
-        <a style="cursor:pointer;width:100%;justify-content:center;display:flex"
+        <a title="Toggle theme" style="cursor:pointer;width:100%;justify-content:center;display:flex"
             id="SoundDarkMenu_ToggleThemeButton" class="headerMenu__link moreMenu__link">
             <svg style="fill:#333;display: none;" id="SDD_DarkIcon" xmlns="http://www.w3.org/2000/svg" height="1.5em"
                 viewBox="0 0 384 512">
-                <title>Dark</title>
                 <path
                     d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
             </svg>
             <svg style="fill:#333" id="SDD_LightIcon" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
-                <title>Light</title>
                 <path
                     d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#333;display: none;" id="SDD_AutoIcon" height="1.5em" viewBox="0 -960 960 960" width="1.5em"><title>Automatic (System)</title><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#333;display: none;" id="SDD_AutoIcon" height="1.5em" viewBox="0 -960 960 960" width="1.5em"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg>
         </a>
         <a title="Disable/Enable creator line at footer" style="display:none;cursor:pointer;width:100%;justify-content:center;display:flex" class="headerMenu__link moreMenu__link"
             target="_blank" id="SoundDarkMenu_ToggleCreatorTag">
@@ -126,6 +138,7 @@ self.addEventListener('DOMContentLoaded', function () {
         </a>
     </div>
 </ul>`;
+                document.getElementById("SoundDarkMenu_ToggleThemeButton").title = GetTitle(localStorage.getItem("SoundDark_mode"));
                 document.getElementById("SoundDarkMenu_ToggleThemeButton").addEventListener('click', ToggleTheme);
                 document.getElementById("SoundDarkMenu_ToggleCreatorTag").addEventListener('click', ToggleCre);
             }
