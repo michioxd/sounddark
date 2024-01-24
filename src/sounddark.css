@@ -600,9 +600,14 @@ hr {
 }
 
 .uiEvoButton--isLight.commentItem__likeButton {
-    background-color: #222 !important;
+    background-color: transparent !important;
 }
 
 .sc-classic .commentForm__submitButton {
     filter: invert(1);
+}
+
+.commentItem__timestampLink, .commentItem__timestampLink:hover, .commentItem__timestampLink:visited {
+    background-color: #212121 !important;
+    color: #2f78ff !important;
 }
