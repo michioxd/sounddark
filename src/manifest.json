@@ -7,10 +7,6 @@
       "48": "icon48.png",
       "128": "icon128.png"
    },
-   "background": {
-      "service_worker": "services.js",
-      "type": "module"
-   },
    "content_scripts": [
       {
          "js": [
