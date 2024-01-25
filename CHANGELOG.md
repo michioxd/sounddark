@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.7] - 2024-01-25
+
+- Add title at toggle theme button while hover button ([#5](https://github.com/michioxd/sounddark/pull/5))
+- Remove service worker ([#4](https://github.com/michioxd/sounddark/pull/4))
+- Fix general bug
+
 ## [0.1.6] - 2024-01-24
 
 - Remove deprecated event (DOMNodeRemoved), use `MutationObserver` (issues [#3](https://github.com/michioxd/sounddark/issues/3))
