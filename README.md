@@ -1,5 +1,6 @@
 # SoundDark
-A better Dark theme for SoundCloud
+
+A better Dark theme for SoundCloud, supported Chromium-based browser and Firefox
 
 ![chrome_jndP7OEisJ](https://github.com/michioxd/sounddark/assets/80969068/a0602884-b07e-4d94-b4ea-b88b902d50d9)
 
@@ -16,9 +17,13 @@ A better Dark theme for SoundCloud
 
 **Chrome Web Store:** lol how to upload to chrome web store for free aaaaaaaaaaaaaaaaaaaaaa!!!
 
+**Mozilla Firefox Add-ons:** coming soon...
+
 ### Install manually
 
-- Go to [Release page](https://github.com/michioxd/sounddark/releases/latest) then download `release.zip`
+**Chromium-based browser (Chrome, Microsoft Edge, Brave, Opera,...):**
+
+- Go to [Release page](https://github.com/michioxd/sounddark/releases/latest) then download `chromium-release.zip`
 - Extract it in anywhere you want
 - Go to Chrome Extension (`chrome://extensions/`), toggle the `Developer Mode` at header
 - Click `Load unpacked` then choose the directory of SoundDark you have extracted
@@ -26,12 +31,22 @@ A better Dark theme for SoundCloud
 
 [Watch install instruction video on YouTube](https://youtu.be/eIGdk0d-oSQ)
 
+**Firefox-based browser (Firefox, Tor Browser,...):**
+
+- Go to [Release page](https://github.com/michioxd/sounddark/releases/latest) then download `firefox-release.zip`
+- Go to Debugging (`about:debugging#/runtime/this-firefox`) then click "Load Temporary Add-on"
+- Select `firefox-release.zip` where you downloaded that file.
+
+**Note:** They will unload this extension if you restart your browser!
+
 ## Development
 
 - Clone this repository
+
   ```shell
   git clone https://github.com/michioxd/sounddark
   ```
+
 - Go to Chrome Extension (`chrome://extensions/`), toggle the `Developer Mode` at header
 - Click `Load unpacked` then choose the `src` directory of SoundDark repository you have cloned
 - Do everything you want :)
@@ -45,7 +60,7 @@ pnpm install
 pnpm run pack
 ```
 
-You should see the release.zip in the `dist` directory
+You should see the `chromium-release.zip` and `firefox-release.zip` in the `dist` directory
 
 ## Screenshots
 
