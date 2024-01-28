@@ -2,15 +2,17 @@
  * 
  * @name SoundDark
  * @description A Chromium extension to get better Dark theme for SoundCloud
- * @version 0.1.7
+ * @version 0.1.8
  * @license https://github.com/michioxd/sounddark/blob/main/LICENSE
  * @author michioxd
  * 
  */
 
-self.addEventListener('DOMContentLoaded', function () {
+document.onreadystatechange = function () {
     const version = "0.1.7";
     const changeThemeQuery = self.matchMedia("(prefers-color-scheme: dark)");
+
+    console.log(`SoundDark v${version} - https://github.com/michioxd/sounddark\nLocal saved: ${localStorage.getItem("SoundDark_mode") ?? "no"}\nSystem color: ${changeThemeQuery.matches ? "dark" : "light"}`);
 
     /**
      * Function to load SoundDark main stylesheet
@@ -52,10 +54,10 @@ self.addEventListener('DOMContentLoaded', function () {
             }
             break;
         case "light":
-            LoadTheme(false);
+            LoadTheme(true);
             break;
         default:
-            LoadTheme(true);
+            LoadTheme(false);
     }
 
     changeThemeQuery.onchange = function (e) {
@@ -69,9 +71,9 @@ self.addEventListener('DOMContentLoaded', function () {
             case "system":
                 return "Automatic (System)";
             case "light":
-                return "Dark";
-            default:
                 return "Light";
+            default:
+                return "Dark";
         }
     }
 
@@ -155,7 +157,7 @@ self.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
+};
 
 (new MutationObserver(function () {
     if (self.location.pathname.startsWith("/you/insights/overview") && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
