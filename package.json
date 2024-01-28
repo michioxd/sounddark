@@ -1,6 +1,6 @@
 {
   "name": "sounddark",
-  "version": "0.1.8",
+  "version": "0.1.8.1",
   "description": "A better Dark theme for SoundCloud",
   "type": "module",
   "main": "index.js",
