@@ -8,11 +8,21 @@
  * 
  */
 
-document.onreadystatechange = function () {
-    const version = "0.1.7";
+function getBrowserPlatform() {
+    if (window.chrome || window.webview) {
+        return 1;
+    } else if (typeof InstallTrigger !== 'undefined') {
+        return 2;
+    } else {
+        return 0;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const version = "0.1.8";
     const changeThemeQuery = self.matchMedia("(prefers-color-scheme: dark)");
 
-    console.log(`SoundDark v${version} - https://github.com/michioxd/sounddark\nLocal saved: ${localStorage.getItem("SoundDark_mode") ?? "no"}\nSystem color: ${changeThemeQuery.matches ? "dark" : "light"}`);
+    console.log(`SoundDark v${version} - https://github.com/michioxd/sounddark\nLocal saved: ${localStorage.getItem("SoundDark_mode") ?? "no"}\nSystem color: ${changeThemeQuery.matches ? "dark" : "light"}\nPlatfrom: ${getBrowserPlatform() === 2 ? "firefox" : getBrowserPlatform() === 1 ? "chromium" : "unknown"}`);
 
     /**
      * Function to load SoundDark main stylesheet
@@ -107,13 +117,20 @@ document.onreadystatechange = function () {
         }
     }
 
-    self.addEventListener('load', function () {
-        document.querySelector(".header__moreButton").addEventListener('click', function () {
-            const targetMenu = document.querySelector(".headerMenu.moreMenu");
-            const SDMenu = document.getElementById("SoundDarkMenu");
+    (new MutationObserver(function () {
+        if (self.location.pathname.startsWith("/you/insights/overview") && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
+            if (document.querySelector(".insightsIframe")) {
+                if (document.querySelector(".insightsIframe").src !== "https://insights-ui.soundcloud.com/?darkmode=true") {
+                    document.querySelector(".insightsIframe").src = 'https://insights-ui.soundcloud.com/?darkmode=true';
+                }
+            }
+        }
 
-            if (targetMenu && !SDMenu) {
-                targetMenu.innerHTML += `
+        const targetMenu = document.querySelector(".headerMenu.moreMenu");
+        const SDMenu = document.getElementById("SoundDarkMenu");
+
+        if (targetMenu && !SDMenu) {
+            targetMenu.innerHTML += `
                 <style>.SoundDarkModeSystem #SoundDarkMenu #SDD_AutoIcon{display:block!important}.SoundDarkModeSystem #SoundDarkMenu #SDD_DarkIcon,.SoundDarkModeSystem #SoundDarkMenu #SDD_LightIcon{display:none!important}</style>
                 <ul id="SoundDarkMenu" class="headerMenu__list sc-list-nostyle">
     <small style="padding: 0.5rem;color:gray;font-weight: normal;font-size:9px">SoundDark v${version} by <a
@@ -152,19 +169,9 @@ document.onreadystatechange = function () {
         </a>
     </div>
 </ul>`;
-                document.getElementById("SoundDarkMenu_ToggleThemeButton").addEventListener('click', ToggleTheme);
-                document.getElementById("SoundDarkMenu_ToggleCreatorTag").addEventListener('click', ToggleCre);
-            }
-        });
-    });
-};
-
-(new MutationObserver(function () {
-    if (self.location.pathname.startsWith("/you/insights/overview") && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
-        if (document.querySelector(".insightsIframe")) {
-            if (document.querySelector(".insightsIframe").src !== "https://insights-ui.soundcloud.com/?darkmode=true") {
-                document.querySelector(".insightsIframe").src = 'https://insights-ui.soundcloud.com/?darkmode=true';
-            }
+            document.getElementById("SoundDarkMenu_ToggleThemeButton").addEventListener('click', ToggleTheme);
+            document.getElementById("SoundDarkMenu_ToggleCreatorTag").addEventListener('click', ToggleCre);
         }
-    }
-})).observe(self.document.documentElement, { attributes: true, childList: true, subtree: true });
+
+    })).observe(self.document.documentElement, { attributes: true, childList: true, subtree: true });
+});
