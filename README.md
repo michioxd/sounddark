@@ -1,20 +1,20 @@
 # SoundDark
 A better Dark theme for SoundCloud
 
-![chrome_DFCvxsfeUw](https://github.com/michioxd/sounddark/assets/80969068/91d6168d-01dc-4b65-9ddd-1530defb396b)
+![chrome_jndP7OEisJ](https://github.com/michioxd/sounddark/assets/80969068/a0602884-b07e-4d94-b4ea-b88b902d50d9)
 
 ## Features
 
-- Toggle theme (original light theme and dark theme)
+- Toggle theme (original light theme, SoundDark dark theme and auto theme followed the system setting)
 - Dark theme :)
 
 ## Installation
 
-### Install via Store
+<a href="https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj" target="_blank">
+  <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Microsoft Edge"/>
+</a>
 
-**Microsoft Store:** [click here](https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj)
-
-**Chrome Web Store:** well... i don't have money :)
+**Chrome Web Store:** lol how to upload to chrome web store for free aaaaaaaaaaaaaaaaaaaaaa!!!
 
 ### Install manually
 
@@ -24,7 +24,7 @@ A better Dark theme for SoundCloud
 - Click `Load unpacked` then choose the directory of SoundDark you have extracted
 - Go to [SoundCloud](https://soundcloud.com) and enjoy :)
 
-[Watch Install instruction video on YouTube](https://youtu.be/eIGdk0d-oSQ)
+[Watch install instruction video on YouTube](https://youtu.be/eIGdk0d-oSQ)
 
 ## Development
 
@@ -47,20 +47,21 @@ pnpm run pack
 
 You should see the release.zip in the `dist` directory
 
-## License
-
-All code are released under [MIT License](LICENSE)
-
 ## Screenshots
 
-![msedge_YyAQ3FHjTP](https://github.com/michioxd/sounddark/assets/80969068/5cba77b0-a8aa-4557-9a18-75060f0e29dd)
-![msedge_ywd1l4AW2e](https://github.com/michioxd/sounddark/assets/80969068/e86251e6-5848-4877-854c-0ba538f7b00d)
-![msedge_kjF75lnNKo](https://github.com/michioxd/sounddark/assets/80969068/0af3b81e-4bb5-4f7e-8cdc-0cce63b19e38)
+![chrome_H8OF3Yfp5K](https://github.com/michioxd/sounddark/assets/80969068/c3d42c75-4f89-428d-a930-21d43f43b3f4)
+![chrome_jndP7OEisJ](https://github.com/michioxd/sounddark/assets/80969068/a0602884-b07e-4d94-b4ea-b88b902d50d9)
+
+wanna see more? [install it lol](#installation)
 
 ## Copyright
 
 The SoundCloud logo is a trademark of SoundCloud Global Limited & Co. KG.
 
+## License
+
+All codes are released under [MIT License](LICENSE)
+
 ## Credits
 
-Made with love from [michioxd](https://github.com/michioxd) 
+Made with love from [michioxd](https://github.com/michioxd) and all [contributors](https://github.com/michioxd/sounddark/graphs/contributors).
