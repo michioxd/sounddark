@@ -13,6 +13,8 @@ A better Dark theme for SoundCloud, supported Chromium-based browser and Firefox
 
 <a href="https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj" target="_blank"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Microsoft Edge"/></a>
 <a href="https://addons.mozilla.org/vi/firefox/addon/sounddark/" target="_blank"><img src="https://github.com/michioxd/sounddark/assets/80969068/9e7bac62-4b49-4754-9852-a58ee108b952" width="200" alt="Firefox"/></a>
+<a href="https://addons.opera.com/vi/extensions/details/sounddark/" target="_blank"><img src="https://dev.opera.com/extensions/branding-guidelines/addons_206x58_en@2x.png" width="240" alt="Opera Browser"/></a>
+
 
 **Chrome Web Store:** lol how to upload to chrome web store for free aaaaaaaaaaaaaaaaaaaaaa!!!
 
