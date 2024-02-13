@@ -36,6 +36,11 @@ A better Dark theme for SoundCloud, supported Chromium-based browser and Firefox
 
 **Note:** They will unload this extension if you restart your browser!
 
+**WARNING**: Make sure you allow permission for SoundDark on Firefox (not On When Clicked)
+
+![image](https://github.com/michioxd/sounddark/assets/80969068/7806287e-2ca0-417f-918e-54a7ffe725fa)
+
+
 ## Development
 
 - Clone this repository
