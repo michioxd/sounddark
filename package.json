@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "crx keygen --force && node ./utils/build.js"
+    "pack": "node ./utils/build.js"
   },
   "keywords": [],
   "author": "",

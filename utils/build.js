@@ -22,14 +22,34 @@ if (!fs.existsSync(distPath)) {
 }
 
 // For Chromium
-const crx = new ChromeExtension({
-    privateKey: fs.readFileSync('./key.pem')
+
+const output_chromium = fs.createWriteStream(distPath + "/chromium-release.zip");
+const archive_chromium = archiver("zip", {
+    zlib: { level: 9 }
 });
 
-const mainExt = await crx.load(sourcePath);
+archive_chromium.on('warning', function (err) {
+    console.warn(err);
+});
 
-const extPacked = await mainExt.pack();
-fs.writeFileSync(distPath + '/chromium-release.zip', extPacked);
+archive_chromium.on('error', function (err) {
+    console.error(err);
+});
+
+archive_chromium.pipe(output_chromium);
+
+archive_chromium.directory(sourcePath, "");
+
+await archive_chromium.finalize();
+
+// const crx = new ChromeExtension({
+//     privateKey: fs.readFileSync('./key.pem')
+// });
+
+// const mainExt = await crx.load(sourcePath);
+
+// const extPacked = await mainExt.pack();
+// fs.writeFileSync(distPath + '/chromium-release.zip', extPacked);
 console.log("OK Chromium");
 
 // For Firefox
