@@ -19,7 +19,7 @@ function getBrowserPlatform() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const version = "0.1.8.2";
+    const version = "0.1.8.3";
     const changeThemeQuery = self.matchMedia("(prefers-color-scheme: dark)");
 
     console.log(`SoundDark v${version} - https://github.com/michioxd/sounddark\nLocal saved: ${localStorage.getItem("SoundDark_mode") ?? "no"}\nSystem color: ${changeThemeQuery.matches ? "dark" : "light"}\nPlatfrom: ${getBrowserPlatform() === 2 ? "firefox" : getBrowserPlatform() === 1 ? "chromium" : "unknown"}`);
