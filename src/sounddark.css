@@ -651,3 +651,7 @@ hr {
     background-color: #212121 !important;
     color: #2f78ff !important;
 }
+
+.sc-classic .activitiesListFull__item+.activitiesListFull__item {
+    border-color: #333;
+}
