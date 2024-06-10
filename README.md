@@ -10,7 +10,7 @@ A better Dark theme for SoundCloud, supported Chromium-based browser and Firefox
 - Dark theme :)
 
 ## Installation
-
+<a href="https://chromewebstore.google.com/detail/sounddark/ablcfojnfkneoplpflnpbeglgkjmiman" target="_blank"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png" width="200" alt="Chrome Web Store"/></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj" target="_blank"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Microsoft Edge"/></a>
 <a href="https://addons.mozilla.org/vi/firefox/addon/sounddark/" target="_blank"><img src="https://github.com/michioxd/sounddark/assets/80969068/9e7bac62-4b49-4754-9852-a58ee108b952" width="200" alt="Firefox"/></a>
 
