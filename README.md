@@ -1,6 +1,6 @@
 # SoundDark
 
-A better Dark theme for SoundCloud, supported Chromium-based browser and Firefox
+An better Dark theme for SoundCloud, supported Chromium-based browser and Firefox
 
 ![chrome_jndP7OEisJ](https://github.com/michioxd/sounddark/assets/80969068/a0602884-b07e-4d94-b4ea-b88b902d50d9)
 
