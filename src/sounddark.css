@@ -107,7 +107,6 @@ body.sc-classic {
 .sc-classic .mobileApps__dismiss,
 .sc-classic .loading,
 .sc-button-medium.sc-button-edit:before,
-.sc-classic .paging-eof:before,
 .emptyNetworkPage.emptyStations .emptyNetworkPage__image,
 .sc-classic .emptyNetworkPage.emptyApps .emptyNetworkPage__image, .sc-classic .emptyNetworkPage.emptySets .emptyNetworkPage__image {
     filter: invert(1) !important;
@@ -247,6 +246,10 @@ a.sc-link-light:hover {
 
 .sc-classic .volume__sliderWrapper {
     background: #222 !important;
+    border-color: transparent !important;
+}
+
+.sc-classic .volume.expanded .volume__sliderWrapper {
     border-color: #333 !important;
 }
 
@@ -666,4 +669,28 @@ hr {
 
 .soundBadge.playlist .soundBadge__artwork .image {
     filter: invert(1);
+}
+
+.sc-classic .paging-eof:before {
+    filter: invert(0.92) !important;
+}
+
+.sc-button-small.sc-button-like:before,
+.sc-button-small.sc-button-more:before {
+    filter: invert(1) !important;
+}
+
+.sc-button-small.sc-button-selected::before,
+.sc-button-small.sc-button-active:before {
+    filter: invert(0) !important;
+}
+
+.sc-classic .gritter-close {
+    filter: invert(1) !important;
+}
+
+.sc-classic .shuffleControl:after,
+.sc-classic .repeatControl:after,
+.sc-classic .repeatControl:before {
+    filter: invert(1) !important;
 }
