@@ -694,3 +694,7 @@ hr {
 .sc-classic .repeatControl:before {
     filter: invert(1) !important;
 }
+
+.sc-classic .g-scrollbar {
+    background-color: rgba(255, 255, 255, 0.3);
+}
