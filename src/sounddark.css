@@ -66,6 +66,10 @@ body, a.sc-link-dark {
     color: #eee !important;
 }
 
+a:hover {
+    color: #ddd;
+}
+
 a.sc-text-verylight:hover {
     opacity: 0.8;
 }
