@@ -741,3 +741,16 @@ hr {
 .userStats__item, .userStats__item:hover, .userStats__item:visited {
     color: #eee !important;
 }
+
+.sc-toggle {
+    border: 2px solid #444 !important;
+    background: #111 !important;
+}
+
+.sc-toggle:before {
+    background: #892d00 !important;
+}
+
+.sc-toggle-handle {
+    background: #908e90 !important;
+}
