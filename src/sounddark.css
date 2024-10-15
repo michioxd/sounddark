@@ -112,8 +112,12 @@ body.sc-classic {
 .sc-classic .loading,
 .sc-button-medium.sc-button-edit:before,
 .emptyNetworkPage.emptyStations .emptyNetworkPage__image,
-.sc-classic .emptyNetworkPage.emptyApps .emptyNetworkPage__image, .sc-classic .emptyNetworkPage.emptySets .emptyNetworkPage__image {
+.sc-classic .emptyNetworkPage.emptyApps .emptyNetworkPage__image {
     filter: invert(1) !important;
+}
+
+.emptyNetworkPage__image {
+    filter: invert(0.9) !important;
 }
 
 .sc-classic .header {
