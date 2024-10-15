@@ -1,27 +1,63 @@
 import archiver from "archiver";
 import fs from "fs";
 import fss from "fs/promises";
-import ChromeExtension from "crx";
-import path from "path";
 import { rimraf } from "rimraf";
+import { minify } from 'minify';
 
 const buildTmp = "./.sounddark_build_tmp",
     sourcePath = "./src",
     distPath = "./dist",
-    firefoxGekkoId = "sounddark@michioxd.github.io";
+    firefoxGekkoId = "sounddark@michioxd.github.io",
+    minifyOptions = {
+        "js": {
+            "mangle": true,
+            "mangleClassName": true,
+            "removeUnusedVariables": true,
+            "removeConsole": false,
+            "removeUselessSpread": true
+        },
+        "css": {
+            "compatibility": "*"
+        }
+    };
 
 console.log("SoundDark extension builder");
 
-if (!fs.existsSync(distPath)) {
-    fs.mkdirSync(distPath);
-} else {
-    const files = fs.readdirSync(distPath);
-    for (const file of files) {
-        fs.unlinkSync(path.join(distPath, file));
-    }
+if (fs.existsSync(distPath)) {
+    await fss.rm(distPath, {
+        recursive: true
+    });
 }
 
-// For Chromium
+await fss.mkdir(distPath);
+
+// Generate build folder
+if (fs.existsSync(buildTmp)) rimraf.sync(buildTmp);
+
+fs.cpSync(sourcePath, buildTmp, {
+    recursive: true,
+});
+
+if (!fs.existsSync(buildTmp)) {
+    console.error("ERROR: Temporary folder not found!");
+    process.exit();
+}
+
+// Minify JS and CSS
+try {
+    const minifier = await Promise.all([
+        minify(buildTmp + '/sounddark.css', minifyOptions),
+        minify(buildTmp + '/sounddark.js', minifyOptions)
+    ]);
+
+    await Promise.all([
+        fss.writeFile(buildTmp + '/sounddark.css', minifier[0]),
+        fss.writeFile(buildTmp + '/sounddark.js', minifier[1])
+    ]);
+} catch (e) {
+    console.error(e);
+    process.exit(1);
+}
 
 const output_chromium = fs.createWriteStream(distPath + "/chromium-release.zip");
 const archive_chromium = archiver("zip", {
@@ -38,33 +74,13 @@ archive_chromium.on('error', function (err) {
 
 archive_chromium.pipe(output_chromium);
 
-archive_chromium.directory(sourcePath, "");
+archive_chromium.directory(buildTmp, "");
 
 await archive_chromium.finalize();
-
-// const crx = new ChromeExtension({
-//     privateKey: fs.readFileSync('./key.pem')
-// });
-
-// const mainExt = await crx.load(sourcePath);
-
-// const extPacked = await mainExt.pack();
-// fs.writeFileSync(distPath + '/chromium-release.zip', extPacked);
 console.log("OK Chromium");
 
-// For Firefox
-if (fs.existsSync(buildTmp)) rimraf.sync(buildTmp);
-
-fs.cpSync(sourcePath, buildTmp, {
-    recursive: true,
-});
-
-if (!fs.existsSync(buildTmp)) {
-    console.error("ERROR: Temporary folder not found!");
-    process.exit();
-}
-
 try {
+    console.log("Generating Firefox extension...");
     const manifest = await fss.readFile(buildTmp + "/manifest.json", 'utf8');
 
     const mainfestData = JSON.parse(manifest);
@@ -81,7 +97,7 @@ try {
 
 } catch (e) {
     console.error(e);
-    process.exit();
+    process.exit(1);
 }
 
 const output = fs.createWriteStream(distPath + "/firefox-release.zip");
@@ -95,6 +111,7 @@ archive.on('warning', function (err) {
 
 archive.on('error', function (err) {
     console.error(err);
+    process.exit(1);
 });
 
 archive.pipe(output);
@@ -104,5 +121,4 @@ archive.directory(buildTmp, "");
 await archive.finalize();
 
 rimraf.sync(buildTmp);
-
 console.log("Done!");

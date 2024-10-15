@@ -1,0 +1,30 @@
+name: Test pack extension
+
+on:
+  push:
+    paths:
+      - "src/**"
+      - ".github/workflows/*"
+      - "utils/**"
+  pull_request:
+    paths:
+      - "src/**"
+      - ".github/workflows/*"
+      - "utils/**"
+  workflow_dispatch:
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm i -g pnpm && pnpm install
+
+      - name: Validate CSS
+        run: pnpm run test
+
+      - name: Pack
+        run: pnpm run pack

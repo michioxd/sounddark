@@ -13,7 +13,7 @@ html {
 }
 
 #SoundDarkMenu svg {
-    fill: #fff !important;
+    filter: invert(1);
 }
 
 #SoundDarkMenu #SDD_DarkIcon {
@@ -39,10 +39,6 @@ html {
 
 #SoundDarkMenu #SoundDarkMenu_ToggleCreatorTag {
     display: flex !important;
-}
-
-.SoundDarkDisableCre #SoundDarkMenu_ToggleCreatorTag svg {
-    fill: #ff8b8b !important;
 }
 
 .l-footer::after {
