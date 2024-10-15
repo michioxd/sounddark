@@ -2,7 +2,7 @@
  * 
  * @name SoundDark
  * @description A Chromium extension to get better Dark theme for SoundCloud
- * @version 0.3
+ * @version 0.3.1
  * @license https://github.com/michioxd/sounddark/blob/main/LICENSE
  * @author michioxd
  * 
