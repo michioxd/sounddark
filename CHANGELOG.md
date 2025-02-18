@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4] - 2025-02-18
+
+- New Dark theme replaction for page based iframe.
+- Add invert color for OneTrust cookie banner and Track insight.
+- Dark color for waveform not available.
+
+Thanks to @nuqbe for the issue.
+
 ## [0.3.1] - 2024-10-15
 
 - Fix profile toggle switch [PR #8](https://github.com/michioxd/sounddark/pull/8) (thanks @JumpySWE)
