@@ -769,3 +769,8 @@ hr {
     filter: invert(0.932) !important;
     -webkit-filter: invert(0.932) !important;
 }
+
+iframe#two-factor-iframe {
+    filter: invert(0.932) !important;
+    -webkit-filter: invert(0.932) !important;
+}
