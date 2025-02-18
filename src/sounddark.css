@@ -759,3 +759,13 @@ hr {
     color: #666 !important;
     text-shadow: 1px 1px 1px #111;
 }
+
+.sc-classic .editTrackItem.m-active .editTrackItem__additional, .sc-classic .editTrackItem.m-hover .editTrackItem__additional {
+    background: #444 !important;
+    background: linear-gradient(90deg, hsla(0, 0%, 94.9%, .1), #444 17px) !important;
+}
+
+.webiEmbeddedModuleContainer iframe[title="Track insights"] {
+    filter: invert(0.932) !important;
+    -webkit-filter: invert(0.932) !important;
+}
