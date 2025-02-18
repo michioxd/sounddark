@@ -141,14 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        if (self.location.pathname.startsWith("/you/insights/overview") && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
-            if (document.querySelector(".insightsIframe")) {
-                if (document.querySelector(".insightsIframe").src !== "https://insights-ui.soundcloud.com/?darkmode=true") {
-                    document.querySelector(".insightsIframe").src = 'https://insights-ui.soundcloud.com/?darkmode=true';
-                }
-            }
-        }
-
         const targetMenu = document.querySelector(".headerMenu.moreMenu");
         const SDMenu = document.getElementById("SoundDarkMenu");
 
