@@ -765,7 +765,7 @@ hr {
     background: linear-gradient(90deg, hsla(0, 0%, 94.9%, .1), #444 17px) !important;
 }
 
-.webiEmbeddedModuleContainer iframe[title="Track insights"], iframe#two-factor-iframe, #onetrust-banner-sdk {
+.webiEmbeddedModuleContainer iframe[title="Track insights"], iframe#two-factor-iframe, #onetrust-banner-sdk, #onetrust-pc-sdk {
     filter: invert(0.932) !important;
     -webkit-filter: invert(0.932) !important;
 }
