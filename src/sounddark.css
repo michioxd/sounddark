@@ -754,3 +754,8 @@ hr {
 .sc-toggle-handle {
     background: #908e90 !important;
 }
+
+.waveform__emptyMessage {
+    color: #666 !important;
+    text-shadow: 1px 1px 1px #111;
+}
