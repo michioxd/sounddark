@@ -116,7 +116,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    /** @type {{path: string | "any", selector: string, src: string}[]} */
+    const darkFrame = [
+        {
+            path: "/you/insights/overview",
+            selector: ".insightsIframe",
+            src: "https://insights-ui.soundcloud.com/?darkmode=true"
+        },
+        {
+            path: "/settings/two-factor",
+            selector: ".two-factor-iframe",
+            src: "https://mobi.soundcloud.com/settings/twoFA?theme=dark"
+        }
+    ];
+
     (new MutationObserver(function () {
+        if (localStorage.getItem("SoundDark_dismissDark") !== "yes") {
+            darkFrame.forEach(({ path, selector, src }) => {
+                if ((self.location.pathname.startsWith(path) || path === "any") && document.querySelector(selector)) {
+                    if (document.querySelector(selector).src !== src) {
+                        document.querySelector(selector).src = src;
+                    }
+                }
+            });
+        }
+
         if (self.location.pathname.startsWith("/you/insights/overview") && localStorage.getItem("SoundDark_dismissDark") !== "yes") {
             if (document.querySelector(".insightsIframe")) {
                 if (document.querySelector(".insightsIframe").src !== "https://insights-ui.soundcloud.com/?darkmode=true") {
