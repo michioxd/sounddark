@@ -660,7 +660,7 @@ hr {
 }
 
 .sc-classic .activitiesListFull__item+.activitiesListFull__item {
-    border-color: #333;
+    border-color: #333 !important;
 }
 
 .sc-classic .listenContent__inner {
