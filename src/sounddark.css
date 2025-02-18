@@ -2,7 +2,7 @@
  * 
  * @name SoundDark
  * @description A Chromium extension to get better Dark theme for SoundCloud
- * @version 0.3
+ * @version 0.3.1
  * @license https://github.com/michioxd/sounddark/blob/main/LICENSE
  * @author michioxd
  * 
@@ -13,7 +13,7 @@ html {
 }
 
 #SoundDarkMenu svg {
-    fill: #fff !important;
+    filter: invert(1);
 }
 
 #SoundDarkMenu #SDD_DarkIcon {
@@ -39,10 +39,6 @@ html {
 
 #SoundDarkMenu #SoundDarkMenu_ToggleCreatorTag {
     display: flex !important;
-}
-
-.SoundDarkDisableCre #SoundDarkMenu_ToggleCreatorTag svg {
-    fill: #ff8b8b !important;
 }
 
 .l-footer::after {
@@ -112,8 +108,12 @@ body.sc-classic {
 .sc-classic .loading,
 .sc-button-medium.sc-button-edit:before,
 .emptyNetworkPage.emptyStations .emptyNetworkPage__image,
-.sc-classic .emptyNetworkPage.emptyApps .emptyNetworkPage__image, .sc-classic .emptyNetworkPage.emptySets .emptyNetworkPage__image {
+.sc-classic .emptyNetworkPage.emptyApps .emptyNetworkPage__image {
     filter: invert(1) !important;
+}
+
+.emptyNetworkPage__image {
+    filter: invert(0.9) !important;
 }
 
 .sc-classic .header {
@@ -740,4 +740,17 @@ hr {
 .artistConnectContainerItem__location,
 .userStats__item, .userStats__item:hover, .userStats__item:visited {
     color: #eee !important;
+}
+
+.sc-toggle {
+    border: 2px solid #444 !important;
+    background: #111 !important;
+}
+
+.sc-toggle:before {
+    background: #892d00 !important;
+}
+
+.sc-toggle-handle {
+    background: #908e90 !important;
 }
