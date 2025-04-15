@@ -1,3 +1,7 @@
+# DEPRECATED - NO LONGER NEEDED!!
+
+SoundCloud has finally implemented a dark mode theme—looks better, right? That means this extension is no longer needed and will be archived soon. Please remove it from your browser and enjoy the new official theme. Thanks for using this extension!
+
 # SoundDark
 
 A better Dark theme for SoundCloud, supported Chromium-based browser and Firefox
